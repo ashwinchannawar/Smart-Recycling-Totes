@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<script src="https://sdk.amazonaws.com/js/aws-sdk-2.7.16.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+		<script async defer
+		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBrrMX2CrkTiPCFdoZtW2yJBKA-8jvO8cg&callback=startFunction">
+		</script>
+		<link rel="stylesheet" href="styles.css">
+	</head>
+	<body>
+		<h3 align = "center">Smart Recycling Bin Tracker</h3>
+		<div class="container">
+			<div class="row"> 
+				<div class="col-sm-5">
+					<div align = "center">
+						<table id = "table">
+							<thead>
+								<tr>
+									<th>Address</th>
+									<th>Percent Full</th>
+									<th>Weight (lbs)</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>North Campus, Buffalo NY</td>
+									<td>
+									<div class="progress" style="margin-bottom:0px">
+									<div class="progress-bar" id="progress-bar1" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width:50%">50%</div>
+									</div>
+									</td>
+									<td>7.11</td>
+								</tr>
+								<tr>
+									<td>South Campus, Buffalo NY</td>
+									<td>
+									<div class="progress" style="margin-bottom:0px">
+									<div class="progress-bar" id="progress-bar2" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width:80%">80%</div>
+									</div>
+									</td>
+									<td>12.56</td>
+								</tr>
+							 	<tr>
+									<td>Buffalo Niagara Airport</td>
+									<td>
+									<div class="progress" style="margin-bottom:0px">
+									<div class="progress-bar" id="progress-bar" role="progressbar" aria-valuenow="33" aria-valuemin="0" aria-valuemax="100" style="width:33%">33%</div>
+									</div>
+									</td>
+									<td>0.46</td>
+								</tr>
+								<tr>
+									<td>Sample address 1</td>
+									<td>
+									<div class="progress" style="margin-bottom:0px">
+									<div class="progress-bar" id="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width:75%">75%</div>
+									</div>
+									</td>
+									<td>6.41</td>
+								</tr>
+								<tr>
+									<td>Sample address 2</td>
+									<td>
+									<div class="progress" style="margin-bottom:0px">
+									<div class="progress-bar" id="progress-bar" role="progressbar" aria-valuenow="41" aria-valuemin="0" aria-valuemax="100" style="width:41%">41%</div>
+									</div></td>
+									<td>2.32</td>
+								</tr>
+							</tbody>
+						</table>
+						<canvas id="myChart" height="200x"></canvas>
+					</div> 
+				</div> 
+
+				<div class="col-sm-7">
+					<div id="map"></div>
+				</div>
+			</div>
+		</div>
+		<script src="main.js" ></script>
+	</body>
+</html>
